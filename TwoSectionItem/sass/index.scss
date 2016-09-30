@@ -1,0 +1,81 @@
+@charset "utf-8";
+/*header*/
+$width: 100%;
+.header{
+	width: $width;
+	height:38px;
+	background-color: #f4f4f4;
+	.header-wrapper{
+		width:1000px;
+		margin: 0 auto;
+		position: relative;
+		.header-left{
+			float: left;
+			color: #333;
+			line-height: 38px;
+			padding: 0 10px;
+			cursor: pointer;
+			span{
+				background: url(../img/index-img/arrow-up.png) no-repeat right center;
+				padding-right:13px;
+			}
+		}
+		.AreaList{
+			display: none;
+			position: absolute;
+			left: 0 ;
+			top: 38px;
+			width: 320px;
+			height: 201px;
+			padding: 17px 10px 10px 10px;
+			background-color: #fff;
+			border: 1px solid #e7e7e7;
+			.select a{
+				display: inline-block;
+				height: 18px; 
+				padding: 0 5px;
+				&:hover{
+					background-color: #f4f4f4;
+				}
+			}
+			
+		}
+		.channel{
+			float: right;
+
+			li{
+
+				float: left;
+				line-height: 38px;
+				padding:0 20px;
+				background: url(../img/index-img/icon-line.png) no-repeat left center;
+				cursor: pointer;
+			}
+			.stylist,.UserCenter,.cart{
+				padding-left: 20px;
+			}
+			.stylist{
+				background: url(../img/index-img/icon-sjs.png) no-repeat left center;
+			}
+			.UserCenter{
+				background: url(../img/index-img/icon-user.png) no-repeat left center;
+			}
+			.cart{
+				background: url(../img/index-img/icon-car.png) no-repeat left center;
+				.cart-amount{
+					font-weight: bold;
+				}
+			}
+			span{
+				color: #f60;
+			}
+			
+		}
+		.User{
+			float:right;
+			line-height: 38px;
+			padding-right: 20px;
+		}
+	}
+}
+

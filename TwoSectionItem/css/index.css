@@ -1,0 +1,76 @@
+/*header*/
+.header {
+  width: 100%;
+  height: 38px;
+  background-color: #f4f4f4;
+}
+.header .header-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.header .header-wrapper .header-left {
+  float: left;
+  color: #333;
+  line-height: 38px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.header .header-wrapper .header-left span {
+  background: url(../img/index-img/arrow-up.png) no-repeat right center;
+  padding-right: 13px;
+}
+.header .header-wrapper .AreaList {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 38px;
+  width: 320px;
+  height: 201px;
+  padding: 17px 10px 10px 10px;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+}
+.header .header-wrapper .AreaList .select a {
+  display: inline-block;
+  height: 18px;
+  padding: 0 5px;
+}
+.header .header-wrapper .AreaList .select a:hover {
+  background-color: #f4f4f4;
+}
+.header .header-wrapper .channel {
+  float: right;
+}
+.header .header-wrapper .channel li {
+  float: left;
+  line-height: 38px;
+  padding: 0 20px;
+  background: url(../img/index-img/icon-line.png) no-repeat left center;
+  cursor: pointer;
+}
+.header .header-wrapper .channel .stylist, .header .header-wrapper .channel .UserCenter, .header .header-wrapper .channel .cart {
+  padding-left: 20px;
+}
+.header .header-wrapper .channel .stylist {
+  background: url(../img/index-img/icon-sjs.png) no-repeat left center;
+}
+.header .header-wrapper .channel .UserCenter {
+  background: url(../img/index-img/icon-user.png) no-repeat left center;
+}
+.header .header-wrapper .channel .cart {
+  background: url(../img/index-img/icon-car.png) no-repeat left center;
+}
+.header .header-wrapper .channel .cart .cart-amount {
+  font-weight: bold;
+}
+.header .header-wrapper .channel span {
+  color: #f60;
+}
+.header .header-wrapper .User {
+  float: right;
+  line-height: 38px;
+  padding-right: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

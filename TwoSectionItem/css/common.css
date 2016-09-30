@@ -1,0 +1,22 @@
+@charset "utf-8";
+body{
+	font-family:"微软雅黑";
+	font-size:12px;
+	margin:0;
+	padding:0;
+	border:0;
+}
+html,div,p,span,form,legend,fieldset,h1,h2,h3,h4,h5,h6,hr,ul,li,ol,dl,dd,dt,nr{
+	margin:0;padding:0;
+	border:0;
+}
+button,img,a,input,textarea,th,td,table,lable{
+	margin:0;padding:0;
+}
+img{border:0;}
+a{text-decoration:none;color:#000;}
+ul,li,ol{list-style:none;}
+img{display: block;}
+html,body{height:100%;}
+.clear{height:0;overflow:hidden;font-size:0;clear:both;}
+.clearfix:after{content:".";clear:both;height:0;display:block;overflow:hidden;visibility:hidden;}/*万能清除法*/
