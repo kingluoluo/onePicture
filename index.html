@@ -17,8 +17,99 @@
     			<div class="AreaList"><!--AreaList  区域范围-->
     				<ul>
     					<li class="select">
-    						<a href="javascript:;" provinceId="1">北京市</a>
+    						<a href="javascript:;" cityName="北京市" provinceId="1">北京市</a>
     					</li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="天津市" provinceid="2">天津市</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="河北省" provinceid="3">河北省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="山西省" provinceid="4">山西省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="内蒙古自治区" provinceid="5">内蒙古自治区</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="辽宁省" provinceid="6">辽宁省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="吉林省" provinceid="7">吉林省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="黑龙江省" provinceid="8">黑龙江省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="上海市" provinceid="9">上海市</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="江苏省" provinceid="10">江苏省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="浙江省" provinceid="11">浙江省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="安徽省" provinceid="12">安徽省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="福建省" provinceid="13">福建省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="江西省" provinceid="14">江西省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="山东省" provinceid="15">山东省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="河南省" provinceid="16">河南省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="湖北省" provinceid="17">湖北省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="湖南省" provinceid="18">湖南省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="广东省" provinceid="19">广东省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="广西壮族自治区" provinceid="20">广西壮族自治区</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="海南省" provinceid="21">海南省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="重庆市" provinceid="22">重庆市</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="四川省" provinceid="23">四川省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="贵州省" provinceid="24">贵州省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="云南省" provinceid="25">云南省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="西藏自治区" provinceid="26">西藏自治区</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="陕西省" provinceid="27">陕西省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="甘肃省" provinceid="28">甘肃省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="青海省" provinceid="29">青海省</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="宁夏回族自治区" provinceid="30">宁夏回族自治区</a>
+	                    </li>
+	                    <li>
+	                    	<a href="javascript:;" cityName="新疆维吾尔自治区" provinceid="31">新疆维吾尔自治区</a>
+	                    </li>
+
     				</ul>
     			</div>	
 				<!--通道-->
@@ -29,7 +120,7 @@
 						</li>
 						<li>
 							<a href="#" class="UserCenter">个人中心</a>
-							<div>
+							<div class="UserCenterSelect">
 								<a href="javascript:;">我的订单</a>
 								<a href="javascript:;">我的文件</a>
 								<a href="javascript:;">我的模板</a>
@@ -41,11 +132,17 @@
 								<span class="cart-amount">0</span>
 								件
 							</a>
+							<div class="cartCommodity">
+								<p class="noCommodity">购物车还没有商品，赶紧选购吧！</p>
+								<p class="viewCart">
+									<a href="javascript:;">查看我的购物车</a>
+								</p>
+							</div>
 						</li>
 						<li>
 							<a href="#" class="help">帮助</a>
 						</li>
-						<li>
+						<li class="service">
 							联系客服：
 							<span class="service-color">4008-727-998</span>
 						</li>
@@ -83,5 +180,7 @@
 		<div id="footer">
 	    <div class="footer"></div>
 	   </div>
+	   <script src="js/jquery-1.11.3.js"></script>	
+	   <script src="js/index.js"></script>
     </body>
 </html>

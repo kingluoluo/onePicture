@@ -5,7 +5,7 @@
   background-color: #f4f4f4;
 }
 .header .header-wrapper {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -21,56 +21,120 @@
   padding-right: 13px;
 }
 .header .header-wrapper .AreaList {
-  display: none;
+  display: block;
   position: absolute;
   left: 0;
   top: 38px;
   width: 320px;
   height: 201px;
   padding: 17px 10px 10px 10px;
-  background-color: #fff;
   border: 1px solid #e7e7e7;
+  border-top: 0;
+  background-color: #fff;
 }
-.header .header-wrapper .AreaList .select a {
+.header .header-wrapper .AreaList li {
+  float: left;
+  width: 54px;
+  height: 18px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 0 10px 10px;
+}
+.header .header-wrapper .AreaList li a {
   display: inline-block;
   height: 18px;
   padding: 0 5px;
 }
-.header .header-wrapper .AreaList .select a:hover {
+.header .header-wrapper .AreaList li a:hover {
   background-color: #f4f4f4;
+  color: #fff;
 }
 .header .header-wrapper .channel {
   float: right;
 }
 .header .header-wrapper .channel li {
+  position: relative;
   float: left;
   line-height: 38px;
   padding: 0 20px;
   background: url(../img/index-img/icon-line.png) no-repeat left center;
   cursor: pointer;
 }
+.header .header-wrapper .channel li div {
+  position: absolute;
+  border: 1px solid #e7e7e7;
+  border-top: 0;
+  background-color: #fff;
+  display: block;
+  overflow: hidden;
+}
+.header .header-wrapper .channel li .stylist {
+  background: url(../img/index-img/icon-sjs.png) no-repeat left center;
+}
+.header .header-wrapper .channel li .UserCenter {
+  background: url(../img/index-img/icon-user.png) no-repeat left center;
+}
+.header .header-wrapper .channel li .UserCenterSelect {
+  left: 1px;
+  top: 38px;
+  width: 106px;
+  height: 96px;
+}
+.header .header-wrapper .channel li .UserCenterSelect a {
+  display: block;
+  line-height: 30px;
+  padding-left: 20px;
+}
+.header .header-wrapper .channel li .cart {
+  background: url(../img/index-img/icon-car.png) no-repeat left center;
+}
+.header .header-wrapper .channel li .cart .cart-amount {
+  font-weight: bold;
+}
+.header .header-wrapper .channel li .cartCommodity {
+  width: 331px;
+  height: auto;
+  left: 1px;
+  top: 38px;
+}
+.header .header-wrapper .channel li .cartCommodity .noCommodity {
+  padding: 30px 20px;
+  color: #999;
+  line-height: 12px;
+}
+.header .header-wrapper .channel li .cartCommodity .viewCart {
+  text-align: right;
+  margin-right: 10px;
+}
+.header .header-wrapper .channel li .cartCommodity .viewCart a {
+  color: #fff;
+  background-color: #f60;
+  display: inline-block;
+  width: 120px;
+  height: 24px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 0 10px 14px 0;
+  text-align: center;
+  padding: 0;
+  line-height: 24px;
+}
+.header .header-wrapper .channel li span {
+  color: #f60;
+}
 .header .header-wrapper .channel .stylist, .header .header-wrapper .channel .UserCenter, .header .header-wrapper .channel .cart {
   padding-left: 20px;
 }
-.header .header-wrapper .channel .stylist {
-  background: url(../img/index-img/icon-sjs.png) no-repeat left center;
-}
-.header .header-wrapper .channel .UserCenter {
-  background: url(../img/index-img/icon-user.png) no-repeat left center;
-}
-.header .header-wrapper .channel .cart {
-  background: url(../img/index-img/icon-car.png) no-repeat left center;
-}
-.header .header-wrapper .channel .cart .cart-amount {
-  font-weight: bold;
-}
-.header .header-wrapper .channel span {
-  color: #f60;
+.header .header-wrapper .channel .service {
+  padding-right: 0;
 }
 .header .header-wrapper .User {
   float: right;
   line-height: 38px;
   padding-right: 20px;
+}
+.header .header-wrapper a:hover {
+  color: #f60;
 }
 
 /*# sourceMappingURL=index.css.map */

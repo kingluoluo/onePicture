@@ -1,12 +1,22 @@
 @charset "utf-8";
 /*header*/
 $width: 100%;
+@mixin divBorder{
+	border: 1px solid #e7e7e7;
+	border-top: 0;
+	background-color: #fff;
+}
+@mixin headerBorder{
+	border: 1px solid #f4f4f4;
+	border-top: 0;
+	border-bottom: 0;
+}
 .header{
 	width: $width;
 	height:38px;
 	background-color: #f4f4f4;
 	.header-wrapper{
-		width:1000px;
+		width:1200px;
 		margin: 0 auto;
 		position: relative;
 		.header-left{
@@ -21,53 +31,110 @@ $width: 100%;
 			}
 		}
 		.AreaList{
-			display: none;
+			display: block;
 			position: absolute;
 			left: 0 ;
 			top: 38px;
 			width: 320px;
 			height: 201px;
 			padding: 17px 10px 10px 10px;
-			background-color: #fff;
-			border: 1px solid #e7e7e7;
-			.select a{
+			@include divBorder;
+			li{
+				float: left;
+				width: 54px;
+				height: 18px;
+				overflow: hidden;
 				display: inline-block;
-				height: 18px; 
-				padding: 0 5px;
-				&:hover{
-					background-color: #f4f4f4;
+				margin: 0 0 10px 10px;
+				a{
+					display: inline-block;
+					height: 18px; 
+					padding: 0 5px;
+					&:hover{
+						background-color: #f4f4f4;
+						color: #fff;
+					}
 				}
 			}
 			
 		}
 		.channel{
 			float: right;
-
 			li{
-
+				position: relative;
 				float: left;
 				line-height: 38px;
 				padding:0 20px;
 				background: url(../img/index-img/icon-line.png) no-repeat left center;
 				cursor: pointer;
+				div{
+					position: absolute;
+					@include divBorder;
+					display: block;
+					overflow: hidden;
+				}
+				.stylist{
+					background: url(../img/index-img/icon-sjs.png) no-repeat left center;
+				}
+				.UserCenter{
+					background: url(../img/index-img/icon-user.png) no-repeat left center;
+
+				}
+				.UserCenterSelect{
+					left: 1px;
+					top:38px;
+					width:106px;
+					height:96px;
+					a{
+						display: block;
+						line-height: 30px;
+						padding-left: 20px;
+					}
+				}
+				.cart{
+					background: url(../img/index-img/icon-car.png) no-repeat left center;
+					.cart-amount{
+						font-weight: bold;
+					}
+				}
+				.cartCommodity{
+					width: 331px;
+					height: auto;
+					left:  1px;
+					top: 38px;
+					.noCommodity{
+						padding: 30px 20px;
+						color: #999;
+						line-height: 12px;
+					}
+					.viewCart{
+						text-align:right;
+						margin-right: 10px;
+						a{
+							color: #fff;
+							background-color: #f60;
+							display: inline-block;
+							width: 120px;
+							height: 24px;
+							font-weight: 600;
+							border-radius: 5px;
+							font-size: 0 10px 14px 0;
+							text-align: center;
+							padding: 0;
+							line-height:24px;
+
+						}
+					}
+				}
+				span{
+					color: #f60;
+				}
 			}
 			.stylist,.UserCenter,.cart{
 				padding-left: 20px;
 			}
-			.stylist{
-				background: url(../img/index-img/icon-sjs.png) no-repeat left center;
-			}
-			.UserCenter{
-				background: url(../img/index-img/icon-user.png) no-repeat left center;
-			}
-			.cart{
-				background: url(../img/index-img/icon-car.png) no-repeat left center;
-				.cart-amount{
-					font-weight: bold;
-				}
-			}
-			span{
-				color: #f60;
+			.service{
+				padding-right: 0;
 			}
 			
 		}
@@ -76,6 +143,9 @@ $width: 100%;
 			line-height: 38px;
 			padding-right: 20px;
 		}
+		a:hover{
+				color: #f60;
+			}
 	}
 }
 
