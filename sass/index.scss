@@ -225,6 +225,10 @@ $width: 100%;
 	height: 50px;
 	background: #4e433d;
 	min-width: 1200px;
+	position: relative;
+	a{
+		cursor: pointer;
+	}
 	.nav-wrapper{
 		width: 1200px;
 		margin: 0 auto;
@@ -233,12 +237,127 @@ $width: 100%;
 			padding-left: 40px;
 			padding-right: 12px;
 			background: url(../img/index-img/icon-all.png) no-repeat 14px center;
+			position: relative;
+		}
+		/*menu*/
+		.menu-wrapper{
+			.menu{
+				display: none;
+				width: 200px;
+				height: 456px;
+				background: #fffdfc;
+				position: absolute;
+				left: 0;
+				top: 50px;
+				border-top:none !important;
+				border: 1px solid #dbdbdb;
+				padding-top: 10px;
+				.goods-menu{
+					width: 201px;
+					height: 57px;
+					position: relative;
+					padding: 0 20px;
+					overflow: hidden;
+					.menu-left{
+						display: inline-block;
+						float: left;
+						font: 14px/1 "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+						position: relative;
+						width: 160px;
+						height: 37px;
+						.menu-left-top{
+							color: #333;
+							font: 14px/15px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+							display: block;
+							font-weight: bold;
+						}
+						.menu-left-bottom{
+							padding-top: 8px;
+							display: block;
+							a{
+								color: #999;
+								padding-right: 10px;
+								font: 12px/1 "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+							}
+						}
+					}
+				}
+				.goods-item{
+					border-top: none !important;
+					display: none;
+					border: 1px solid #675d57;
+					width: 790px !important;
+					height: 457px;
+					position: absolute;
+					background-color: #fff;
+					left: 200px;
+					top: 0;
+					.item-left{
+						padding: 19px 0 0 33px;
+						float: left;
+						display: inline-block;
+						.menu-left{
+							width: 500px;
+							height: auto;
+							.item{
+								font-size: 15px;
+								font-weight: 900;
+								color: #675d57;
+								float: left;
+								margin: 12px 25px 9px 0 !important;
+								display: inline-block;
+								line-height: 100% !important;
+								width: 90px !important;
+							}
+							ul{
+								width: 381px !important;
+								float: left !important;
+								overflow: hidden;
+								margin-bottom: 12px !important;
+								li{
+									display: inline-block;
+									width: auto !important;
+									margin: 12px 23px 0 0 !important;
+									line-height: 100% !important;
+									height: auto  !important;
+									float: left  !important;
+									a{
+										color: #333;
+									}
+									.new-color{
+										color: #ff4301;
+									}
+								}
+							}
+						}
+					}
+					.item-right{
+						float: right;
+						display: inline-block;
+						position: absolute !important;
+						top: 35px !important;
+						right: 30px !important;
+						width: 240px !important;
+						height: 394px !important;
+						border: none !important;
+						overflow: hidden;
+						a{
+							display: block;
+							margin-bottom: 20px !important;
+							img{
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+			}
 		}
 		.nav-right{
-			float: right;
+			float: left;
 			width: 1062px;
 			display: inline-block;
 			height: 50px;
+			position: relative;
 			.nav-option{
 				float: left;
 				display: inline-block;
@@ -277,9 +396,81 @@ $width: 100%;
 				}
 			}
 		}
-		a{
+		.nav-a{
 			font: 16px/50px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
 			color: #fff;
 		}
 	}
+	.nav-content{
+			display: none;
+			width: 100%;
+			height: 200px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: 1px 6px 6px -5px #ccc;
+			position: absolute;
+			left: 0;
+			top: 50px;
+			background: #fff;
+			.nav-container{
+				width: 1200px;
+				margin: 0 auto;
+				height: 200px;
+				.nav-container-wrapper{
+					width: 1180px;
+					margin: 0 10px;
+					display: inline-block;
+					height: 200px;
+					.nav-select{
+						display: none;
+						height: 130px;
+						margin-top: 35px;
+						border-left: 1px solid #e7e7e7;
+						float: left;
+						dl{
+							width: 220px;
+							height: 150px;
+							overflow: hidden;
+							float: left;
+							&:hover{
+								background: #fafafa;
+								a{
+									color: #f60;
+								}
+							}
+							dt{
+								display: inline-block;
+								float: left;
+								width: 219px;
+								height: 130px;
+								border-right: 1px solid #e7e7e7;
+								overflow: hidden;
+								text-align:center;
+								.color-orange{
+									font: 16px/1 "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+								} 
+							}
+							dd{
+								font: 14px/18px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+								color: #f60;
+								display: block;
+								text-align: center;
+								width: 219px;
+								float: left;
+							}
+						}
+						.forDesign-more{
+							width: 56px;
+							height: 22px;
+							display: inline-block;
+							margin: 109px 0 0 20px;
+							float: left;
+							background:url(../img/index-img/icon-more.jpg) no-repeat center;
+							&:hover{
+								background:url(../img/index-img/icon-more.png) no-repeat center;
+							}
+						}
+					}
+				}
+			}
+		}
 }
