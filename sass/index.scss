@@ -708,7 +708,6 @@ $width: 100%;
 						width: 380px;
 						height: 26px;
 					}
-					@include picTitle;
 					.lists-title-a{
 						width: 210px;
 					}
@@ -718,6 +717,7 @@ $width: 100%;
 				}
 			}
 			.hotSellTwo-lists{
+				height: 280px;
 				.hotSellTwo-li{
 					width: 280px;
 					margin-right: 20px;
@@ -757,6 +757,43 @@ $width: 100%;
 				position: absolute;
 				width: 71px;
 				height: 24px;
+			}
+		}
+	}
+	.designServe{
+		width: 100%;
+		background: #fafafa;
+		height: 460px;
+		margin-top: 40px;
+		overflow: hidden;
+		.designServe-wrapper{
+			margin: auto;
+			width: 1180px;
+			position: relative;
+			.designServe-line{
+				width: 1180px;
+				border-top: 1px solid #dadada;
+				position: absolute;
+				top: 42px;
+				left: 0;
+				z-index: 1;
+			}
+			.designServe-title{
+				margin: 0 auto;
+				width: 200px;
+				font-size: 20px;
+				line-height: 100%;
+				text-align: center;
+				color: #573926;
+				background: #fafafa;
+				padding: 30px 0;
+				position: relative;		
+				z-index: 2;
+			}
+			.designServe-li{
+				width: 232px;
+				overflow: hidden;
+				text-align: center;
 			}
 		}
 	}

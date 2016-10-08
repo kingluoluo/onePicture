@@ -672,43 +672,14 @@
   width: 380px;
   height: 26px;
 }
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title {
-  padding: 25px 10px;
-  background: #fafafa;
-}
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf {
-  line-height: 20px;
-  font-size: 16px;
-  color: #333;
-  width: 100%;
-  height: 20px;
-  font-family: 'Microsoft Yahei',Verdana,Tahoma, sans-serif;
-}
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf a {
-  /*width: 210px;*/
-  padding-right: 14px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  float: left;
-}
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf a:hover {
-  color: #f60;
-}
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf span {
-  float: left;
-  font-size: 16px;
-  color: #999;
-  display: inline;
-}
-.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf .priceColor1 {
-  font-size: 24px;
-  color: #f60;
-}
 .main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title-a {
   width: 210px;
 }
 .main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .last-list {
   margin-right: 0;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists {
+  height: 280px;
 }
 .main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li {
   width: 280px;
@@ -779,6 +750,43 @@
   position: absolute;
   width: 71px;
   height: 24px;
+}
+.main .designServe {
+  width: 100%;
+  background: #fafafa;
+  height: 460px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.main .designServe .designServe-wrapper {
+  margin: auto;
+  width: 1180px;
+  position: relative;
+}
+.main .designServe .designServe-wrapper .designServe-line {
+  width: 1180px;
+  border-top: 1px solid #dadada;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 1;
+}
+.main .designServe .designServe-wrapper .designServe-title {
+  margin: 0 auto;
+  width: 200px;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: #573926;
+  background: #fafafa;
+  padding: 30px 0;
+  position: relative;
+  z-index: 2;
+}
+.main .designServe .designServe-wrapper .designServe-li {
+  width: 232px;
+  overflow: hidden;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */
