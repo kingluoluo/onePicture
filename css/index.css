@@ -7,12 +7,19 @@
   /* iOS 4.1- */
 }
 /*shadow*/
-.showShadow {
-  box-shadow: 10px 10px 10px #ccc;
-  -webkit-box-shadow: 10px 10px 10px #ccc;
-  -moz-box-shadow: 10px 10px 10px #ccc;
+.bigShadow {
+  box-shadow: 5px 5px 10px #ccc;
+  -webkit-box-shadow: 5px 5px 10px #ccc;
+  -moz-box-shadow: 5px 5px 10px #ccc;
 }
 
+.littleShadow {
+  box-shadow: 5px 10px 15px #ccc;
+  -webkit-box-shadow: 5px 10px 15px #ccc;
+  -moz-box-shadow: 5px 10px 15px #ccc;
+}
+
+/*main picture*/
 /*header*/
 .header {
   width: 100%;
@@ -589,7 +596,6 @@
   position: relative;
   width: 920px;
   height: 90px;
-  overflow: hidden;
 }
 .main .floor-wrapper .change-list .picture-show {
   position: relative;
@@ -635,6 +641,144 @@
   margin-top: 40px;
   padding-bottom: 30px;
   background: url(../img/index-img/floor-title.png) no-repeat 0 10px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists {
+  height: 360px;
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box {
+  width: 380px;
+  margin-right: 20px;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box:hover {
+  margin-top: -5px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-box-a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .positionBase {
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .hotGoods-picture {
+  background: url(../img/index-img/rmsp1.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 249px;
+  width: 380px;
+  height: 26px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title {
+  padding: 25px 10px;
+  background: #fafafa;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf {
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  height: 20px;
+  font-family: 'Microsoft Yahei',Verdana,Tahoma, sans-serif;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf a {
+  /*width: 210px;*/
+  padding-right: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf a:hover {
+  color: #f60;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf span {
+  float: left;
+  font-size: 16px;
+  color: #999;
+  display: inline;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title .text-herf .priceColor1 {
+  font-size: 24px;
+  color: #f60;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .lists-box .lists-title-a {
+  width: 210px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellOne-lists .last-list {
+  margin-right: 0;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li {
+  width: 280px;
+  margin-right: 20px;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li .hotSellTwo-a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li .hotSellTwo-a img {
+  max-height: 210px;
+  height: auto !important;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li .newGoods {
+  background: url(../img/index-img/xpss.png) no-repeat;
+  right: 3px;
+  top: -6px;
+  position: absolute;
+  width: 71px;
+  height: 24px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .hotSellTwo-li:hover {
+  margin-top: -5px;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotSellTwo-lists .last-list {
+  margin-right: 0;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title {
+  padding: 25px 10px;
+  background: #fafafa;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title .text-herf {
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  height: 20px;
+  font-family: 'Microsoft Yahei',Verdana,Tahoma, sans-serif;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title .text-herf a {
+  /*width: 210px;*/
+  padding-right: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title .text-herf a:hover {
+  color: #f60;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title .text-herf span {
+  float: left;
+  font-size: 16px;
+  color: #999;
+  display: inline;
+}
+.main .hotSellOne .hotSellOne-wrapper .lists-title .text-herf .priceColor1 {
+  font-size: 24px;
+  color: #f60;
+}
+.main .hotSellOne .hotSellOne-wrapper .hotGoods-position {
+  background: url(../img/index-img/rmsp.png) no-repeat;
+  right: 3px;
+  top: -6px;
+  position: absolute;
+  width: 71px;
+  height: 24px;
 }
 
 /*# sourceMappingURL=index.css.map */

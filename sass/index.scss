@@ -13,8 +13,47 @@
 	-webkit-box-shadow: $x $y $expand $color;
 	-moz-box-shadow: $x $y $expand $color;
 }
-.showShadow{
-	@include box-shadow(10px,10px,10px);
+.bigShadow{
+	@include box-shadow(5px,5px,10px);
+}
+.littleShadow{
+	@include box-shadow(5px,10px,15px);
+}
+/*main picture*/
+@mixin picTitle{
+	.lists-title{
+		padding: 25px 10px;
+		background: #fafafa;
+		.text-herf{
+			line-height: 20px;
+			font-size: 16px;
+			color: #333;
+			width: 100%;
+			height: 20px;
+			font-family: 'Microsoft Yahei',Verdana,Tahoma, sans-serif;
+			a{
+				/*width: 210px;*/
+				padding-right: 14px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				float: left;
+				&:hover{
+					color: #f60;
+				}
+			}
+			span{
+				float: left;
+				font-size: 16px;
+				color: #999;
+				display: inline;
+			}
+			.priceColor1{
+				font-size: 24px;
+				color: #f60;
+			}
+
+		}
+	}
 }
 /*header*/
 $width: 100%;
@@ -597,7 +636,6 @@ $width: 100%;
 			position: relative;
 			width: 920px;
 			height: 90px;
-			overflow: hidden;
 			.picture-show{
 				position: relative;
 				margin-right: 10px;
@@ -642,7 +680,84 @@ $width: 100%;
 				padding-bottom: 30px;
 				background: url(../img/index-img/floor-title.png) no-repeat 0 10px;
 			}
+			.hotSellOne-lists{
+				height: 360px;
+				position: relative;
+				.lists-box{
+					width: 380px;
+					margin-right: 20px;
+					float: left;
+					display: inline;
+					position: relative;
+					&:hover{
+						margin-top: -5px;
+					}
+					.lists-box-a{
+						overflow: hidden;
+						display: block;
+						position: relative;
+					}
+					.positionBase{
+						position: relative;
+					}
+					.hotGoods-picture{
+						background: url(../img/index-img/rmsp1.png) no-repeat;
+						position: absolute;
+						left: 0;
+						top: 249px;
+						width: 380px;
+						height: 26px;
+					}
+					@include picTitle;
+					.lists-title-a{
+						width: 210px;
+					}
+				}
+				.last-list{
+					margin-right: 0;
+				}
+			}
+			.hotSellTwo-lists{
+				.hotSellTwo-li{
+					width: 280px;
+					margin-right: 20px;
+					float: left;
+					display: inline;
+					position: relative;
+					.hotSellTwo-a{
+						overflow: hidden;
+						display: block;
+						position: relative;
+						img{
+							max-height: 210px;
+							height: auto !important;
+						}
+					}
+					.newGoods{
+						background: url(../img/index-img/xpss.png) no-repeat;
+						right: 3px;
+						top: -6px;
+						position: absolute;
+						width: 71px;
+						height: 24px;
+					}
+					&:hover{
+						margin-top: -5px;
+					}
+				}
+				.last-list{
+					margin-right: 0;
+				}
+			}
+			@include picTitle;
+			.hotGoods-position{
+				background: url(../img/index-img/rmsp.png) no-repeat;
+				right: 3px;
+				top: -6px;
+				position: absolute;
+				width: 71px;
+				height: 24px;
+			}
 		}
-		
 	}
 }

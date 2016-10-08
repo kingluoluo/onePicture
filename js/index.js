@@ -106,8 +106,20 @@ $(function(){
 $(function(){
 	var that = this;
 	$('.picture-show').hover(function(){
-		$(this).addClass('showShadow');
+		$(this).addClass('bigShadow');
+		//console.log(1);
 	},function(){
-		$(this).removeClass('showShadow');
+		$(this).removeClass('bigShadow');
+		//console.log(2);
+	});
+	$('.lists-box').hover(function(){
+		$(this).addClass('littleShadow');
+	},function(){
+		$(this).removeClass('littleShadow');
+	});
+	$('.hotSellTwo-li').hover(function(){
+		$(this).addClass('littleShadow');
+	},function(){
+		$(this).removeClass('littleShadow');
 	});
 });

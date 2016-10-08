@@ -13,7 +13,7 @@ html,div,p,span,form,legend,fieldset,h1,h2,h3,h4,h5,h6,hr,ul,li,ol,dl,dd,dt,nr{
 button,img,a,input,textarea,th,td,table,lable{
 	margin:0;padding:0;
 }
-img{border:0;}
+img{border:0;vertical-align: middle;}
 a{text-decoration:none;color:#000;margin: 0;padding:0;}
 ul,li,ol{list-style:none;}
 img{display: block;}
