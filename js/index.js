@@ -42,10 +42,11 @@ $(function(){
 		},
 		changeBg: function(){
 			var that = this;
+			this.bgColor = this.imgs.eq(this.now).next().attr('dataBg');
 			if(this.now < 4){ //先判断小于4
 				this.banner.css({
 					backgroundColor: function(){
-						return that.imgs.eq(that.now).next().attr('dataBg');
+						return that.bgColor;
 					}
 				});				
 			}else{
@@ -104,7 +105,6 @@ $(function(){
 });
 //floor shadow
 $(function(){
-	var that = this;
 	$('.picture-show').hover(function(){
 		$(this).addClass('bigShadow');
 		//console.log(1);
@@ -122,4 +122,45 @@ $(function(){
 	},function(){
 		$(this).removeClass('littleShadow');
 	});
+});
+//手风琴
+$(function(){
+	var liLeft = {
+		init: function(){
+			this.lis = $('.designServe-lists li');
+			
+			this.switchWidth();
+		},
+		//鼠标滑过事件
+		switchWidth: function(){
+			var that = this;
+			$('.designServe-li').hover(function(){
+				//console.log(1);
+				$(this).find('.big-opa-pic').css({
+					display: 'block'
+				}).next('.opa-pic').css({
+					background: '#FF9B59',
+					opacity: 1
+				});
+				$('.designServe-li').stop(true).animate({
+					width: 203
+				},100)
+				$(this).stop(true).animate({
+					width: 348
+				},100);
+			},function(){
+				//console.log(2);
+				$(this).find('.big-opa-pic').css({
+					display: 'none'
+				}).next('.opa-pic').css({
+					background: '#000',
+					opacity: 0.3
+				});
+				$('.designServe-lists li').stop(true).animate({
+					width: 232
+				});
+			});
+		},
+	};
+	liLeft.init();
 });

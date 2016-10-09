@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*font*/
 @font-face {
   font-family: 'iconfont';
@@ -20,6 +21,7 @@
 }
 
 /*main picture*/
+/*间距设置*/
 /*header*/
 .header {
   width: 100%;
@@ -435,7 +437,7 @@
   height: 200px;
 }
 .nav .nav-content .nav-container .nav-container-wrapper {
-  width: 1180px;
+  width: 1200px;
   margin: 0 10px;
   display: inline-block;
   height: 200px;
@@ -627,7 +629,7 @@
   border-color: #ff6600;
 }
 .main .hotSellOne {
-  width: 1180px;
+  width: 1200px;
   margin: 0 auto;
 }
 .main .hotSellOne .hotSellOne-wrapper {
@@ -760,11 +762,11 @@
 }
 .main .designServe .designServe-wrapper {
   margin: auto;
-  width: 1180px;
+  width: 1200px;
   position: relative;
 }
 .main .designServe .designServe-wrapper .designServe-line {
-  width: 1180px;
+  width: 1200px;
   border-top: 1px solid #dadada;
   position: absolute;
   top: 42px;
@@ -783,10 +785,93 @@
   position: relative;
   z-index: 2;
 }
-.main .designServe .designServe-wrapper .designServe-li {
+.main .designServe .designServe-wrapper .designServe-lists {
+  width: 1200px;
+  overflow: hidden;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li {
   width: 232px;
+  height: 349px;
   overflow: hidden;
   text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li .designServe-a {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li .designServe-a .pic-bg {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li .big-opa-pic {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  opacity: 0.3;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li .opa-pic {
+  width: 100%;
+  height: 40px;
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #000;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-li .list-title {
+  font-size: 18px;
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+  color: #fff;
+}
+.main .designServe .designServe-wrapper .designServe-lists .designServe-last-li {
+  margin-right: 0 !important;
+}
+.main .main-comments {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.main .main-comments .comments-title {
+  width: 100%;
+  height: 22px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #ebebeb;
+}
+.main .main-comments .comments-title .left-text {
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  width: 72px;
+  height: 24px;
+  background: #fff;
+  padding-right: 10px;
+}
+.main .main-comments .comments-title .right-herf {
+  float: right;
+  display: inline-block;
+  width: 63px;
+  height: 19px;
+  background: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-top: 4px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -55,6 +55,10 @@
 		}
 	}
 }
+/*间距设置*/
+@function getMargin($parent: 1200px,$child: 240px,$num: 4){
+	@return ( $parent -$child * $num ) / $num;
+}
 /*header*/
 $width: 100%;
 @mixin divBorder{
@@ -472,7 +476,7 @@ $width: 100%;
 				margin: 0 auto;
 				height: 200px;
 				.nav-container-wrapper{
-					width: 1180px;
+					width: 1200px;
 					margin: 0 10px;
 					display: inline-block;
 					height: 200px;
@@ -667,7 +671,7 @@ $width: 100%;
 		}
 	}
 	.hotSellOne{
-		width:1180px;
+		width: 1200px;
 		margin: 0 auto;
 		.hotSellOne-wrapper{
 			text-align: center;
@@ -768,10 +772,10 @@ $width: 100%;
 		overflow: hidden;
 		.designServe-wrapper{
 			margin: auto;
-			width: 1180px;
+			width: 1200px;
 			position: relative;
 			.designServe-line{
-				width: 1180px;
+				width: 1200px;
 				border-top: 1px solid #dadada;
 				position: absolute;
 				top: 42px;
@@ -790,10 +794,95 @@ $width: 100%;
 				position: relative;		
 				z-index: 2;
 			}
-			.designServe-li{
-				width: 232px;
+			.designServe-lists{
+				width: 1200px;
 				overflow: hidden;
-				text-align: center;
+				.designServe-li{
+					$width: 232px;
+					$margin: getMargin(1200px,$width,5);
+					width: $width;
+					height: 349px;
+					overflow: hidden;
+					text-align: center;
+					display: inline-block;
+					position: relative;
+					margin-right: 5px;
+					.designServe-a{
+						overflow: hidden;
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: relative;
+						.pic-bg{
+							width: 100%;
+							height: 100%;
+							background: no-repeat center;
+						}
+					}
+					.big-opa-pic{
+						display: none;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						left: 0;
+						top: 0;
+						background: #fff;
+						opacity: 0.3;
+					}
+					.opa-pic{
+						width: 100%;
+						height: 40px;
+						opacity: 0.2;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						background: #000;
+					}
+					.list-title{
+						font-size: 18px;
+						height:20px;
+						width: 100%;
+						line-height: 20px;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						padding: 10px 0;
+						color: #fff;
+					}
+				}
+				.designServe-last-li{
+					margin-right: 0 !important;
+				}
+			}
+		}
+	}
+	.main-comments{
+		width: 1200px;
+		margin: 0 auto;
+		margin-top: 30px;
+		.comments-title{
+			width: 100%;
+			height: 22px;
+			margin-bottom: 30px;
+			border-bottom: 1px dashed #ebebeb;
+			.left-text{
+				float: left;
+				font-size: 18px;
+				display: inline-block;
+				width: 72px;
+				height: 24px;
+				background: #fff;
+				padding-right: 10px;
+			}
+			.right-herf{
+				float: right;
+				display: inline-block;
+				width: 63px;
+				height: 19px;
+				background: #fff;
+				font-size: 14px;
+				padding-left: 10px;
+				margin-top: 4px;
 			}
 		}
 	}
