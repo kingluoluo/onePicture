@@ -176,3 +176,9 @@ $(function(){
 		})
 	});
 });
+/*footer active*/
+$(function(){
+	$('.c-w-active-top').click(function(){
+		$('.c-w-active-bottom').slideToggle('slow');
+	});
+});

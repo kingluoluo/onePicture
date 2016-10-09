@@ -973,9 +973,183 @@
 }
 
 /*footer*/
-.footer .footer-wrapper {
+.footer .f-container {
   width: 1200px;
   margin: 0 auto;
+}
+.footer .f-container .container-wrapper {
+  width: 100%;
+  /*.c-w-active{
+  	height: 19px;
+  	min-height: 19px !important;
+  	max-height: 120px !important;
+  	border-bottom: 1px solid #f60;
+  	padding: 25px 0 20px 0;
+  	overflow: hidden;
+  	dl{
+  		width: 236px;
+  		float: left;
+  		overflow: hidden;
+  		dt{
+  			text-align: center;
+  			a{
+  				background: url(../img/index-img/icon-down.jpg) no-repeat right center;
+  				font: 16px/26px "Microsoft Yahei",Verdana, Tahoma,sans-serif;
+  				color: #666;
+  				padding-right: 30px;
+  			}
+  		}
+  		dd{
+  			margin-top: 15px;
+  			padding-left: 73px;
+  			a{
+  				margin-top: 10px;
+  				display: block;
+  				color: #999;
+  				font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+  			}
+  		}
+  	}
+  	.active-tel{
+  		dt{
+  			padding-left: 40px;
+  		}
+  		dd{
+  			font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+  			color: #666;
+  			margin-top: 18px;
+  			padding-left: 45px;
+  		}
+  		a{
+  			display: block;
+  			width: 159px;
+  			height: 26px;
+  			background: url(../img/index-img/icon-call.jpg) no-repeat center;
+  			&:hover{
+  				background: url(../img/index-img/icon-call-hover.jpg) no-repeat center;
+  			}
+  		}
+  	}
+  }*/
+}
+.footer .f-container .container-wrapper .c-w-active {
+  min-height: 20px;
+  height: auto !important;
+  border-bottom: 1px solid #f60;
+  padding: 25px 0 20px 0;
+  overflow: hidden;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-top ul li {
+  width: 236px;
+  height: 26px;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-top ul li a {
+  background: url(../img/index-img/icon-down.jpg) no-repeat right center;
+  font: 16px/26px "Microsoft Yahei",Verdana, Tahoma,sans-serif;
+  color: #666;
+  padding-right: 30px;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom {
+  display: none;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom ul li {
+  width: 160px;
+  margin-top: 15px;
+  float: left;
+  padding-left: 75px;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom ul li a {
+  margin-top: 10px;
+  display: block;
+  color: #999;
+  font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom ul li a:hover {
+  color: #f60;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-top-li {
+  width: 157px !important;
+  padding-left: 30px;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom-li {
+  font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+  color: #666;
+  margin-top: 18px;
+  width: 180px !important;
+  padding-left: 40px !important;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom-li a {
+  display: block;
+  width: 159px;
+  height: 26px;
+  background: url(../img/index-img/icon-call.jpg) no-repeat center;
+}
+.footer .f-container .container-wrapper .c-w-active .c-w-active-bottom-li a:hover {
+  background: url(../img/index-img/icon-call-hover.jpg) no-repeat center;
+}
+.footer .f-aboutUs {
+  background: #fafafa;
+  text-align: center;
+  width: 100%;
+}
+.footer .f-aboutUs .f-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper {
+  padding: 15px 0;
+  border-bottom: 1px silid #e7e7e7;
+  width: 1180px;
+  display: inline;
+  float: left;
+  margin: 0 10px;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper p {
+  font: 12px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+  color: #666;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper p a:hover {
+  color: #f60;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper a {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper a img {
+  float: left;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper a p {
+  float: left;
+  margin-left: 5px;
+  color: #939393;
+}
+.footer .f-aboutUs .f-container .aboutUs-wrapper .aboutUs-last-p {
+  margin-top: 10px;
+}
+.footer .f-friendLink {
+  background: #fafafa;
+  padding: 15px 0 30px 0;
+  width: 100%;
+}
+.footer .f-friendLink .friendLink-wrapper {
+  width: 1200px;
+  display: inline;
+  float: left;
+  margin: 0 auto;
+}
+.footer .f-friendLink .friendLink-wrapper li {
+  display: inline-block;
+  float: left;
+  color: #e7e7e7;
+}
+.footer .f-friendLink .friendLink-wrapper li a {
+  font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+  padding: 0 20px;
+  color: #999;
 }
 
 /*# sourceMappingURL=index.css.map */
