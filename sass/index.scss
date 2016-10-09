@@ -858,6 +858,7 @@ $width: 100%;
 	}
 	.main-comments{
 		width: 1200px;
+		height: 445px;
 		margin: 0 auto;
 		margin-top: 30px;
 		.comments-title{
@@ -883,7 +884,113 @@ $width: 100%;
 				font-size: 14px;
 				padding-left: 10px;
 				margin-top: 4px;
+				&:hover{
+					color: #f60;
+				}
 			}
 		}
+		.comments-lists{
+			.commentsItem{
+				float: left;
+				display: inline;
+				max-width: 280px;
+				width: auto !important;
+				position: relative;
+				padding-bottom: 10px;
+				margin-right: 26px;
+				border-bottom: 1px solid #ebebeb;
+				.comments-img{
+					max-width: 280px;
+					width: auto !important;
+					max-height: 210px;
+					height: auto !important;
+					line-height: 100%;
+					display: block;
+					margin-bottom: 20px;
+					overflow: hidden;
+					position: relative;
+					img{
+						max-height: 210px;
+						height: auto !important;
+					}
+					span{
+						display: none;
+						width: 100%;
+						height: 100%;
+						background: #fff;
+						opacity: 0.7;
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+				.comments-herf{
+					display: block;
+					margin-bottom: 15px;
+					font-size: 16px;
+					width: auto;
+					text-align: left;
+					line-height: 20px;
+					white-space: nowrap;
+					overflow: hidden;
+					&:hover{
+						color: #f60;
+					}
+				}
+				.comments-time{
+					min-width: 280px;
+					max-width: 280px;
+					width: auto;
+					margin-bottom: 5px;
+					text-align: right;
+					color: #999;
+					overflow: hidden;
+					line-height: 100%;
+				}
+				.comments-text{
+					padding: 9px 25px;
+					height: 75px;
+					line-height: 17px;
+					color: #666;
+					background: url(../img/index-img/comments-bg.png) no-repeat;
+				}
+			}
+			.commentsItem-last{
+				margin-right: 0 !important;
+			}
+		}
+	}
+	.bottom-ul{
+		margin: 0 auto;
+		margin-top: 40px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #ebebeb;
+		background: url(../img/index-img/bottom-ulbg.png) no-repeat;
+		width: 1200px;
+		height: 62px;
+		li{
+			margin-right: 118px;
+			padding-left: 80px;
+			display: inline;
+			float: left;
+			line-height: 60px;
+			a{
+				font-size: 18px;
+				color: #000;
+				&:hover{
+					color: #939393;
+				}
+			}
+		}
+		.bottom-last-li{
+			margin-right: 0;
+		}
+	}
+}
+/*footer*/
+.footer{
+	.footer-wrapper{
+		width: 1200px;
+		margin: 0 auto;
 	}
 }

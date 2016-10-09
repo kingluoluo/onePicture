@@ -139,7 +139,7 @@ $(function(){
 				$(this).find('.big-opa-pic').css({
 					display: 'block'
 				}).next('.opa-pic').css({
-					background: '#FF9B59',
+					background: '#f60',
 					opacity: 1
 				});
 				$('.designServe-li').stop(true).animate({
@@ -163,4 +163,16 @@ $(function(){
 		},
 	};
 	liLeft.init();
+});
+/*comments span*/
+$(function(){
+	$('.comments-img').hover(function(){
+		$(this).find('span').css({
+			display: 'block'
+		})
+	},function(){
+		$(this).find('span').css({
+			display: 'none'
+		})
+	});
 });
