@@ -79,6 +79,12 @@ $width: 100%;
 	right: -16px;
 	top: 0;
 }
+@mixin changeColor{
+	background: #f60;
+}
+@mixin changeNavColor{
+	background-color: #675d57;
+}
 .header{
 	width: $width;
 	height:38px;
@@ -86,6 +92,7 @@ $width: 100%;
 	.header-wrapper{
 		width:1200px;
 		margin: 0 auto;
+		height: 38px;
 		position: relative;
 		.header-left{
 			float: left;
@@ -93,6 +100,9 @@ $width: 100%;
 			line-height: 38px;
 			padding: 0 10px;
 			cursor: pointer;
+			border: 1px solid #f4f4f4;
+			border-bottom: 0;
+			border-top: 0;
 			span{
 				background: url(../img/index-img/arrow-up.png) no-repeat right center;
 				padding-right:13px;
@@ -106,40 +116,66 @@ $width: 100%;
 			width: 320px;
 			height: 201px;
 			padding: 17px 10px 10px 10px;
+			z-index: 999;
 			@include divBorder;
 			li{
 				float: left;
-				width: 54px;
+				width: 46px;
 				height: 18px;
+				line-height: 18px;
 				overflow: hidden;
 				display: inline-block;
-				margin: 0 0 10px 10px;
+				margin: 0 0 10px 16px;
+				text-align: center;
 				a{
 					display: inline-block;
 					height: 18px; 
 					padding: 0 5px;
-					&:hover{
-						background-color: #f4f4f4;
-						color: #fff;
+					
+				}
+				&:hover{
+					background-color: #f4f4f4;
+					a{
+						color: #000;
 					}
+				}
+			}
+			.select{
+				background-color: #f60;
+				a{
+					color: #fff;
 				}
 			}
 			
 		}
 		.channel{
 			float: right;
+			.header-address-change{
+				border-left: 1px solid #e7e7e7;
+				height: 38px;
+				line-height: 38px;
+				margin-top: 0;
+			}
 			li{
 				position: relative;
 				float: left;
+				height: 38px;
 				line-height: 38px;
-				padding:0 20px;
-				background: url(../img/index-img/icon-line.png) no-repeat left center;
+				padding-left: 20px;	
 				cursor: pointer;
 				div{
 					position: absolute;
 					@include divBorder;
 					display: block;
 					overflow: hidden;
+				}
+				.li-a{
+					display: block;
+					height: 18px;
+					line-height: 18px;
+					margin-top: 10px;
+					border-right: 1px solid #e7e7e7;
+					padding-right: 20px;
 				}
 				.stylist{
 					background: url(../img/index-img/icon-sjs.png) no-repeat left center;
@@ -150,10 +186,11 @@ $width: 100%;
 				}
 				.UserCenterSelect{
 					display: none;
-					left: 1px;
-					top:38px;
-					width:106px;
-					height:96px;
+					left: -1px;
+					top: 38px;
+					width: 108px;
+					height: 96px;
+					z-index: 999;
 					a{
 						display: block;
 						line-height: 30px;
@@ -170,7 +207,7 @@ $width: 100%;
 					display: none;
 					width: 331px;
 					height: auto;
-					left:  1px;
+					left:  -1px;
 					top: 38px;
 					.noCommodity{
 						padding: 30px 20px;
@@ -200,6 +237,9 @@ $width: 100%;
 					color: #f60;
 				}
 			}
+			.bg-white:hover{
+				background: #fff;
+			}
 			.stylist,.UserCenter,.cart{
 				padding-left: 20px;
 			}
@@ -212,13 +252,23 @@ $width: 100%;
 			float:right;
 			line-height: 38px;
 			padding-right: 20px;
+			background: url(../img/index-img/icon-line.png) no-repeat right center;
 		}
 		a:hover{
-				color: #f60;
-			}
+			color: #f60;
+		}
+		.header-left-change{
+			background: #fff;
+			border: 1px solid #e7e7e7;
+			border-bottom: 0;
+			border-top: 0;
+			height: 38px;
+		}
 	}
 }
-
+.change-span-bg{
+	background: url(../img/index-img/arrow-b.png) no-repeat right center !important;
+}
 /*logo*/
 .logo{
 	width: $width;
@@ -250,7 +300,12 @@ $width: 100%;
 					padding: 0 12px;
 					font-size: 14px;
 					cursor: pointer;
-					height: 26px;
+					height: 20px;
+					padding-top: 6px;
+				}
+				.li-changeColor{
+					@include changeColor;
+					color: #fff;
 				}
 			}
 			.search-box{
@@ -263,6 +318,7 @@ $width: 100%;
 				border: 2px solid #ff6600;
 				border-right: 0;
 				font: 14px/18px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+				outline: none;
 			}
 			.goSearch{
 				height: 38px;
@@ -271,6 +327,12 @@ $width: 100%;
 				float: left;
 				background: url(../img/index-img/icon-S.jpg) no-repeat center;
 				cursor: pointer;
+				outline: none;
+			}
+			.goSearch-bg{
+				height: 39px;
+				width: 62px;
+				background: url(../img/index-img/icon-Shover.jpg) no-repeat center !important;
 			}
 		}
 		.phone{
@@ -298,6 +360,9 @@ $width: 100%;
 			padding-right: 12px;
 			background: url(../img/index-img/icon-all.png) no-repeat 14px center;
 			position: relative;
+			&:hover{
+				@include changeNavColor
+			}
 		}
 		/*menu*/
 		.menu-wrapper{
@@ -311,13 +376,19 @@ $width: 100%;
 				top: 50px;
 				border-top:none !important;
 				border: 1px solid #dbdbdb;
-				padding-top: 10px;
+				z-index: 998;
+				.goods-menu-bg{
+					background: #fff !important;
+				}
 				.goods-menu{
-					width: 201px;
-					height: 57px;
+					width: 180px;
+					height: 47px;
 					position: relative;
 					padding: 0 20px;
 					overflow: hidden;
+					padding-top: 10px;
+					z-index: 997;
+
 					.menu-left{
 						display: inline-block;
 						float: left;
@@ -352,6 +423,7 @@ $width: 100%;
 					background-color: #fff;
 					left: 200px;
 					top: 0;
+					z-index: 996;
 					.item-left{
 						padding: 19px 0 0 33px;
 						float: left;
@@ -424,6 +496,9 @@ $width: 100%;
 				width: 118px;
 				height: 50px;
 				text-align: center;
+				&:hover{
+					@include changeNavColor
+				}
 				.nav-pullDown{
 					display: inline-block;
 					padding-right: 15px;
@@ -471,6 +546,7 @@ $width: 100%;
 			left: 0;
 			top: 50px;
 			background: #fff;
+			z-index: 998;
 			.nav-container{
 				width: 1200px;
 				margin: 0 auto;
@@ -807,6 +883,7 @@ $width: 100%;
 					display: inline-block;
 					position: relative;
 					margin-right: 5px;
+					cursor: pointer;
 					.designServe-a{
 						overflow: hidden;
 						display: block;
@@ -994,11 +1071,11 @@ $width: 100%;
 		margin: 0 auto;
 		.container-wrapper{
 			width: 100%;
-			/*.c-w-active{
+			.c-w-active{
 				height: 19px;
 				min-height: 19px !important;
 				max-height: 120px !important;
-				border-bottom: 1px solid #f60;
+				border-bottom: 2px solid #f60;
 				padding: 25px 0 20px 0;
 				overflow: hidden;
 				dl{
@@ -1045,8 +1122,8 @@ $width: 100%;
 						}
 					}
 				}
-			}*/
-			.c-w-active{
+			}
+			/*.c-w-active{
 				min-height: 20px;
 				height: auto !important;
 				border-bottom: 1px solid #f60;
@@ -1105,19 +1182,25 @@ $width: 100%;
 						}
 					}
 				}
-			}
+			}*/
 		}
 	}
 	.f-aboutUs{
 		background: #fafafa;
 		text-align: center;
 		width: 100%;
+		height: auto !important;
+		min-height: 130px;
+		_height: 130px;
 		.f-container{
 			margin: 0 auto;
 			width: 1200px;
+			height: auto !important;
+			min-height: 130px;
+			_height: 130px;
 			.aboutUs-wrapper{
 				padding: 15px 0;
-				border-bottom: 1px silid #e7e7e7;
+				border-bottom: 1px solid #e7e7e7;
 				width: 1180px;
 				display: inline;
 				float: left;
@@ -1154,21 +1237,75 @@ $width: 100%;
 		background: #fafafa;
 		padding: 15px 0 30px 0;
 		width: 100%;
+		height: auto !important;
+		min-height: 108px;
+		_height: 108px;
 		.friendLink-wrapper{
 			width: 1200px;
 			display: inline; 
 			float: left;
 			margin: 0 auto;
-			li{
-				display: inline-block;
-				float: left;
-				color: #e7e7e7;
-				a{
-					font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
-				    padding: 0 20px;
-				    color: #999;
+			ul{
+				height: 20px;
+				li{
+					display: inline-block;
+					float: left;
+					color: #e7e7e7;
+					a{
+						font: 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+					    padding: 0 20px;
+					    color: #999;
+					}
+				}
+				.li-change-color{
+					a{
+						color: #f60 !important;
+					}
+				}
+			}
+			.otherLink{
+				height: 30px;
+				margin-top: 13px;
+				overflow: hidden;
+				.p-block{
+					display: block;
+				}
+				p{
+					display: none;
+					position: relative;
+					width: 1180px;
+					float: left;
+					text-align: center;
+					padding-left: 20px;
+					i{
+						display: block;
+						width: 9px;
+						height: 5px;
+						position: absolute;
+						right: 0;
+						top: 10px;
+						background: url(../img/index-img/icon-down.jpg) no-repeat right center;
+						cursor: pointer;
+					}
+					a{
+						font: 12px/30px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
+						padding-right: 20px;
+						color: #999;
+						display: inline-block;
+						float: left;
+						white-space: nowrap;
+						&:hover{
+							color: #f60;
+						}
+					}
+					.otherLink-img{
+						top: -2px;
+					}
 				}
 			}
 		}
 	}
+}
+.change-bg{
+	background: url(../img/index-img/icon-active.jpg) no-repeat right center !important;
 }
