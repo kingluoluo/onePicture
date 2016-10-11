@@ -260,6 +260,7 @@
   width: 155px;
   display: inline-block;
   float: left;
+  position: relative;
 }
 .login-container .login-left .login-validate .input-item .yzm-H-item .yzm-H {
   width: 17px;
@@ -271,6 +272,9 @@
   text-align: center;
   margin-left: 15px;
   cursor: pointer;
+  position: absolute;
+  left: 4px;
+  top: 13px;
 }
 .login-container .login-left .login-validate .input-item .yzm-H-item .yzm-H:hover {
   color: #f60;
@@ -281,7 +285,10 @@
   height: 40px;
   border: #ccc 1px solid;
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 44px;
+  font: 26px/38px 'Microsoft Yahei';
+  text-align: center;
+  color: #ddd;
 }
 .login-container .login-left .login-validate .input-item .yzm-H-item .loginyzmError {
   height: 34px;
@@ -481,7 +488,7 @@
   border-radius: 6px;
   padding-left: 45px;
   position: absolute;
-  right: -190px;
+  right: -214px;
   z-index: 10;
   top: 5px;
   display: inline-block;

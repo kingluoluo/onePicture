@@ -25,7 +25,7 @@ $(function(){
 			this.loginChk = $('.loginChk');
 
 			//验证码图片
-			this.loginCapt = $('.loginCapt');
+			this.yzmH = $('.yzm-H');
 
 			/*验证码按钮*/
 			this.loginSendCode = $('.login-sendCode');
@@ -42,6 +42,24 @@ $(function(){
 			this.phoneBtnClick();
 			this.captImg();
 		},
+		//cookie
+		verifyC: function(){
+			/*var userinfor={
+				username: this.lgName.val(),
+				password: this.pwds.vla(),
+			}
+			$.cookie("userinfo",JSON.stringify(userinfo),expires:7,path:'/');*/
+			var username = $("input[name='username']").val();
+			var password = $('input[password="password"]').val();
+			var userinfo = $.cookie('userinfo')||'{}';
+			userinfo = JSON.parse(userinfo);
+			if(username != userinfo.username || password != userinfo.password){
+				this.loginName();					
+				$('.errorloginName').html('您输入的用户名或者密码不正确');
+				return;
+			}
+			console.log(username);
+		},
 		/*input focus*/
 		havefocus: function(){
 			this.changeIptBg.focus(function(){
@@ -54,23 +72,20 @@ $(function(){
 		},
 		//验证码图片
 		captImg: function(){
-			this.loginCapt.click(function(){
-				console.log(1);
-				var num = parseInt( Math.round( Math.random() ) * 13 );
-				
-				
-				/*
-				$.ajax({
-					url: 'D:/niu/QF/TWO-JS/onePictureItem/js/login.json',
-					data:{
-						num: parseInt( Math.round( Math.random() ) * 13 )
-					},
-					dataType: 'jsonp',
-					success: function(result){
-						console.log(result.data);
-					},
-				});
-				 */
+			var arr = [];
+			for(var i=0;i<4;i++){
+				var num = parseInt( Math.round( Math.random() * 9 ) );
+				arr.push(num);
+			}
+			$('.loginCapt').html( arr );
+				//console.log(arr);
+			this.yzmH.click(function(){
+				var arrs = [];
+				for(var i=0;i<4;i++){
+					var num = parseInt( Math.round( Math.random() * 9 ) );
+					arrs.push(num);
+				}
+				$('.loginCapt').html( arrs );
 			});
 		}, 
 		//用户名验证
@@ -81,6 +96,7 @@ $(function(){
 				$(this).removeClass('input-error');
 				if(	!that.phoneReg.test(val) ){
 					$(this).next().show();
+					return;
 				}else if( that.phoneReg.test(val) ){
 					$(this).next().hide();
 				}
@@ -94,6 +110,7 @@ $(function(){
 				$(this).removeClass('input-error');
 				if(	!that.phoneReg.test(val) ){
 					$(this).next().show();
+					return;
 				}else if( that.phoneReg.test(val) ){
 					$(this).next().hide();
 				}
@@ -107,6 +124,7 @@ $(function(){
 				if(	!that.pwdReg.test(val) ){
 					console.log(1);
 					$(this).next().show();
+					return;
 				}else if( that.pwdReg.test(val) ){
 					$(this).next().hide();
 				}
@@ -117,11 +135,19 @@ $(function(){
 			var that = this;
 			this.loginyzm.blur(function(){
 				var val = $(this).val();
-				$(this).parent().next().find('.loginyzmError').show();
+				var num = $('.loginCapt').html();
+				console.log(val);
+				if( !( val == num ) ){
+					$(this).parent().next().find('.loginyzmError').show();
+					return;
+				}
 			});
 			this.loginyzm.focus(function(){
 				var val = $(this).val();
-				$(this).parent().next().find('.loginyzmError').hide();
+				var num = $('.loginCapt').html();
+				if( val == num){
+					$(this).parent().next().find('.loginyzmError').hide();
+				}
 			});
 		},
 		//短信验证码
@@ -129,40 +155,58 @@ $(function(){
 			var that = this;
 			this.loginCode.blur(function(){
 				var val = $(this).val();
-				$('.errorloginCode').show();
+				var num = $('.loginCapt').html();
+				console.log(val);
+				if( !( val == num ) ){
+					$('.errorloginCode').show();
+					return;
+				}
 			});
 			this.loginCode.focus(function(){
 				var val = $(this).val();
-				$('.errorloginCode').hide();
+				var num = $('.loginCapt').html();
+				if( val == num){
+					$('.errorloginCode').hide();
+				}
 			});
 		},
 		//登录按钮
 		BtnClick: function(){
 			var that = this;
 			this.loginBtn.click(function(){
-				var userName = $('.loginName').val();
-				var pwdVal = $('.password').val();
-				if(	!that.phoneReg.test(userName) ){
-					that.lgName.next().show();
-					that.lgName.addClass('input-error');
-					return;
-				}else if( !that.pwdReg.test(pwdVal) ){
-					that.pwds.next().show();
-					that.pwds.addClass('input-error');
-					return;
-				}
+				that.loginName();
+				that.loginPhone();
+				that.verifyC();
+				/*var userinfo = {
+					username: $('.loginName').val(),
+					password: $('.password').val()
+				};
+				$.cookie('userinfo',JSON.stringify(userinfo),{expires:7,path:'/'});
+				window.location.href = 'login.html';
+				 */
+				console.log("登录成功");
+				window.location.href = 'index.html';
 			});
 		},
 		//手机登录
 		phoneBtnClick: function(){
-			var that = this;
+			var that =this;
 			this.PhoneloginBtn.click(function(){
-					var phonereg = $('.loginphone').val();
-				if(	!that.phoneReg.test(phonereg) ){
-					that.loginphone.next().show();
-					return;
-				}
+				that.loginPhone();
+				that.loginYzm();
+				that.lgCode();
+				that.verifyC();
+				/*var userinfo = {
+					username: $('.loginName').val(),
+					password: $('.password').val()
+				};
+				$.cookie('userinfo',JSON.stringify(userinfo),{expires:7,path:'/'});
+				window.location.href = 'login.html';
+				 */
+				console.log("登录成功");
+				window.location.href = 'index.html';
 			});
+			
 		},
 		//7天免登陆
 		sevenLogin: function(){
