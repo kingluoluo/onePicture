@@ -122,9 +122,9 @@ $(function(){
 
 			this.navRight = $('.nav-right');
 			this.navRights = $('.nav-right .li-slide');
+			this.navRightA = $('.nav-pullDown');
 			this.navSelects = $('.nav-select');
-			console.log( this.navRights.length );
-			console.log( this.navSelects.length );
+
 			this.navLeft();
 			this.navLeftItem();
 			this.goodsItemSA();
@@ -133,13 +133,9 @@ $(function(){
 		},
 		navLeft: function(){
 			this.allGoods.hover(function(){
-				$('.menu').css({
-					display: 'block'
-				});
+				$('.menu').show();
 			},function(){
-				$('.menu').css({
-					display: 'none'
-				});
+				$('.menu').hide();
 			});
 		},
 		navLeftItem: function(){
@@ -150,18 +146,14 @@ $(function(){
 				    borderRight: 'none'
 				});
 				$(this).find('.goods-menu').addClass('goods-menu-bg');
-				$(this).find('.goods-item').css({
-					display: 'block'
-				});
+				$(this).find('.goods-item').show();
 				
 			},function(){
 				$(this).css({
 				    border: 'none'
 				});
 				$(this).find('.goods-menu').removeClass('goods-menu-bg');
-				$(this).find('.goods-item').css({
-					display: 'none'
-				});
+				$(this).find('.goods-item').hide();
 			});
 		},
 		goodsItemSA: function(){
@@ -177,17 +169,11 @@ $(function(){
 		},
 		navright: function(){
 			var that = this;
-			this.navRights.hover(function(){
+			this.navRights.mouseenter(function(){
 				console.log( $(this).index() );
-				that.navSelects.eq( $(this).index() ).css({
-					display: 'block'
-				});
+				that.navSelects.eq( $(this).index() ).show();
+				that.navSelects.eq( $(this).index() ).siblings().hide();
 				$('.nav-content').slideDown(200);
-				that.navRightBox();
-			},function(){
-				that.navSelects.eq( $(this).index() ).css({
-					display: 'none'
-				});
 			});
 			
 			/*
@@ -201,13 +187,10 @@ $(function(){
 		},
 		navRightBox: function(){
 			var that = this;
-			this.navRight.mouseenter(function(){
-				$('.nav-content').slideDown(200);
+			$('.nav-wrapper').mouseleave(function(){
+				$('.nav-content').slideUp(200);
 			});
-			this.navRight.mouseleave(function(){
-				that.navSelects.css({
-					display: 'none'
-				});
+			$('.nav-up').mouseenter(function(){
 				$('.nav-content').slideUp(200);
 			});
 		},
