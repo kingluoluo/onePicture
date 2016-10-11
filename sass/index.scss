@@ -616,7 +616,7 @@ $width: 100%;
     position: fixed;
     _position: absolute;
     width: 5px;
-    height: auto;
+    height: 100%;
     overflow: visible;
     _overflow: hidden;
     top: 0;
@@ -635,22 +635,30 @@ $width: 100%;
 	    top: 50%;
 	    margin-top: -119px;
 	    padding-top: 11px;
+	    li{
+	    	&:hover{
+	    		background-color: #F60 !important;
+	    	}
+	    }
 	    .icon-dhkf{
     	    width: 40px;
 		    text-align: center;
 		    padding: 0;
 		    position: relative;
 		    .dhkf{
-	    	    background: url(../img/index-imgtel.png) no-repeat center center #4e433d;
+	    	    background: url(../img/index-img/tel.png) no-repeat center center #4e433d;
 			    width: 40px !important;
 			    height: 40px;
 			    display: inline-block;
 			    overflow: hidden;
 			    position: relative;
 			    z-index: 2;
+			    &:hover{
+			    	background-color: #f60;
+			    }
 		    }
 	    }
-	    .dhkf{
+	    .dhkf-div{
 	    	width: 96px;
 		    height: 34px;
 		    overflow: hidden;
@@ -677,11 +685,21 @@ $width: 100%;
 			    }
 		    }
 	    }
-	    .zxkf{
+    	.zxkf{
     	    background: url(../img/index-img/weixin.png) no-repeat center 10px #4e433d !important;
 		    padding-top: 36px;
 		    line-height: 15px;
+		    text-align: center;
+		    color: #fff;
 		    height: 66px !important;
+		    width: 36px !important;
+		    display: inline-block;
+		    overflow: hidden;
+		    position: relative;
+		    z-index: 2;
+		    &:hover{
+		    	background-color: #f60;
+		    }
 	    }
 	    .qiufankui{
     	    width: 40px;
@@ -700,9 +718,12 @@ $width: 100%;
 			    overflow: hidden;
 			    position: relative;
 			    z-index: 2;
+			    &:hover{
+			    	background-color: #f60;
+			    }
 			}
 			/* div */
-			.qfk{
+			.qfk-div{
 				font: 14px/40px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
 			    color: #fff;
 			    width: 60px;
@@ -714,9 +735,9 @@ $width: 100%;
 			    left: 40px;
 			    top: 0;
 			    z-index: 1;
-			    /*-webkit-transition: left .3s ease-in-out .1s;
-			    -moz-transition: left .3s ease-in-out .1s;
-			    transition: left .3s ease-in-out .1s;*/
+			    a{
+			    	color: #fff;
+			    }
 			}
 	    }
 	    .icon-fhdb{
@@ -726,7 +747,7 @@ $width: 100%;
 		    position: relative;
 		    /* a */
 		    .fhdb{
-	    	    background: url(/images/2015/index/cjy/top.png) no-repeat center center #4e433d;
+	    	    background: url(../img/index-img/top.png) no-repeat center center #4e433d;
 			    width: 40px;
 			    height: 40px;
 			    /* background: url(/images/2015/index/cjy/tel.png) no-repeat center center #4e433d; */
@@ -738,9 +759,12 @@ $width: 100%;
 			    overflow-y: hidden;
 			    position: relative;
 			    z-index: 2;
+			    &:hover{
+			    	background-color: #f60;
+			    }
 		    }
 		    /* div */
-		    .fhdb{
+		    .fhdb-div{
 				font: 14px/40px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
 			    color: #fff;
 			    width: 74px;
@@ -752,9 +776,9 @@ $width: 100%;
 			    left: 40px;
 			    top: 0;
 			    z-index: 1;
-			    /*-webkit-transition: left .3s ease-in-out .1s;
-			    -moz-transition: left .3s ease-in-out .1s;
-			    transition: left .3s ease-in-out .1s;*/
+			    a{
+			    	color: #fff;
+			    }
 		    }
 	    }
     }

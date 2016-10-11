@@ -78,6 +78,30 @@ $(function(){
 	};
 	areaList.init();
 });
+//回到顶部
+$(function(){
+	$('.rightBox li').hover(function(){
+		$(this).find('div').stop(true).animate({
+			left: -( $(this).find('div a').width() + 18)
+		});
+	},function(){
+		$(this).find('div').stop(true).animate({
+			left: 40
+		});
+	});
+	$('.icon-dhkf').hover(function(){
+		$(this).find('div').stop(true).animate({
+			left: -( $(this).find('div').width() + 18)
+		});
+	},function(){
+		$(this).find('div').stop(true).animate({
+			left: 40
+		});
+	});
+	$('.fhdb-div').click(function(){
+		$(window).scrollTop('0');
+	});
+});
 //logo input click
 $(function(){
 	var inputText = {

@@ -569,7 +569,7 @@
   position: fixed;
   _position: absolute;
   width: 5px;
-  height: auto;
+  height: 100%;
   overflow: visible;
   _overflow: hidden;
   top: 0;
@@ -590,6 +590,9 @@
   margin-top: -119px;
   padding-top: 11px;
 }
+.rightBox ul li:hover {
+  background-color: #F60 !important;
+}
 .rightBox ul .icon-dhkf {
   width: 40px;
   text-align: center;
@@ -597,7 +600,7 @@
   position: relative;
 }
 .rightBox ul .icon-dhkf .dhkf {
-  background: url(../img/index-imgtel.png) no-repeat center center #4e433d;
+  background: url(../img/index-img/tel.png) no-repeat center center #4e433d;
   width: 40px !important;
   height: 40px;
   display: inline-block;
@@ -605,7 +608,10 @@
   position: relative;
   z-index: 2;
 }
-.rightBox ul .dhkf {
+.rightBox ul .icon-dhkf .dhkf:hover {
+  background-color: #f60;
+}
+.rightBox ul .dhkf-div {
   width: 96px;
   height: 34px;
   overflow: hidden;
@@ -621,14 +627,14 @@
   border-radius: 10px 0 0 10px;
   background-color: #f60;
 }
-.rightBox ul .dhkf p {
+.rightBox ul .dhkf-div p {
   width: 123px;
   overflow: hidden;
   float: left;
   font: 12px/16px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
   color: #fff;
 }
-.rightBox ul .dhkf p i {
+.rightBox ul .dhkf-div p i {
   font: bold 14px/20px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
   color: #fff;
 }
@@ -636,7 +642,17 @@
   background: url(../img/index-img/weixin.png) no-repeat center 10px #4e433d !important;
   padding-top: 36px;
   line-height: 15px;
+  text-align: center;
+  color: #fff;
   height: 66px !important;
+  width: 36px !important;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.rightBox ul .zxkf:hover {
+  background-color: #f60;
 }
 .rightBox ul .qiufankui {
   width: 40px;
@@ -658,7 +674,10 @@
   position: relative;
   z-index: 2;
 }
-.rightBox ul .qiufankui .qfk {
+.rightBox ul .qiufankui .qfk:hover {
+  background-color: #f60;
+}
+.rightBox ul .qiufankui .qfk-div {
   font: 14px/40px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
   color: #fff;
   width: 60px;
@@ -670,9 +689,9 @@
   left: 40px;
   top: 0;
   z-index: 1;
-  /*-webkit-transition: left .3s ease-in-out .1s;
-  -moz-transition: left .3s ease-in-out .1s;
-  transition: left .3s ease-in-out .1s;*/
+}
+.rightBox ul .qiufankui .qfk-div a {
+  color: #fff;
 }
 .rightBox ul .icon-fhdb {
   width: 40px;
@@ -683,7 +702,7 @@
   /* div */
 }
 .rightBox ul .icon-fhdb .fhdb {
-  background: url(/images/2015/index/cjy/top.png) no-repeat center center #4e433d;
+  background: url(../img/index-img/top.png) no-repeat center center #4e433d;
   width: 40px;
   height: 40px;
   /* background: url(/images/2015/index/cjy/tel.png) no-repeat center center #4e433d; */
@@ -696,7 +715,10 @@
   position: relative;
   z-index: 2;
 }
-.rightBox ul .icon-fhdb .fhdb {
+.rightBox ul .icon-fhdb .fhdb:hover {
+  background-color: #f60;
+}
+.rightBox ul .icon-fhdb .fhdb-div {
   font: 14px/40px "Microsoft Yahei", Verdana, Tahoma, sans-serif;
   color: #fff;
   width: 74px;
@@ -708,9 +730,9 @@
   left: 40px;
   top: 0;
   z-index: 1;
-  /*-webkit-transition: left .3s ease-in-out .1s;
-  -moz-transition: left .3s ease-in-out .1s;
-  transition: left .3s ease-in-out .1s;*/
+}
+.rightBox ul .icon-fhdb .fhdb-div a {
+  color: #fff;
 }
 
 /*main*/
