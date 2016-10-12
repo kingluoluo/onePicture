@@ -120,7 +120,7 @@
 .login-container .login-left .login-validate .input-item {
   margin-top: 20px;
   position: relative;
-  /*手机登录样式*/
+  /*邮箱注册样式*/
 }
 .login-container .login-left .login-validate .input-item .icon-un {
   width: 22px;
@@ -346,7 +346,7 @@
 .login-container .login-left .login-validate .input-item .loginBtn {
   width: 300px;
   height: 42px;
-  background: #57Af57;
+  background: #3da0fe;
   display: inline-block;
   text-align: center;
   font: 20px/42px 'Microsoft Yahei';
@@ -356,9 +356,10 @@
   cursor: pointer;
   /*transition: background-color 0.5s ease;*/
   outline: none;
+  margin-bottom: 30px;
 }
 .login-container .login-left .login-validate .input-item .loginBtn:hover {
-  background: #53ce53;
+  background: #4fb6fe;
 }
 .login-container .login-left .login-validate .input-item .iconLink {
   width: 20px;
@@ -388,6 +389,14 @@
   left: 10px;
   top: 11px;
   background: url(../img/login-img/icon-un.png) no-repeat left top;
+}
+.login-container .login-left .login-validate .input-item .icon-em {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  background: url(../img/signIn-img/icon-sj.png) no-repeat center;
 }
 .login-container .login-left .login-validate .input-item .loginphone {
   width: 210px;
@@ -522,7 +531,7 @@
 .login-container .login-left .login-validate .PhoneloginBtn {
   width: 300px;
   height: 42px;
-  background: #57Af57;
+  background: #3da0fe;
   display: inline-block;
   text-align: center;
   font: 20px/42px 'Microsoft Yahei';
@@ -534,7 +543,7 @@
   outline: none;
 }
 .login-container .login-left .login-validate .PhoneloginBtn:hover {
-  background: #53ce53;
+  background: #4fb6fe;
 }
 .login-container .login-left .login-validate .inputHeight {
   overflow: hidden;

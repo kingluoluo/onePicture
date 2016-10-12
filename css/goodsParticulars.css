@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*font*/
+@font-face {
+  font-family: 'iconfont';
+  src: url("iconfont.eot");
+  /* IE9*/
+  src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+/*shadow*/
+.bigShadow {
+  box-shadow: 5px 5px 10px #ccc;
+  -webkit-box-shadow: 5px 5px 10px #ccc;
+  -moz-box-shadow: 5px 5px 10px #ccc;
+}
+
+.littleShadow {
+  box-shadow: 5px 10px 15px #ccc;
+  -webkit-box-shadow: 5px 10px 15px #ccc;
+  -moz-box-shadow: 5px 10px 15px #ccc;
+}
+
+/*main picture*/
+/*间距设置*/
+/*header*/
+/*main*/
+.main .print-container {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.main .print-container .location {
+  padding: 20px 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+.main .print-container .location a {
+  font-size: 14px;
+  color: #999;
+}
+.main .print-container .location span {
+  font-size: 14px;
+  color: #999;
+}
+.main .print-container .location .active {
+  font-size: 14px;
+  color: #666;
+  background: none;
+}
+.main .print-container .printLeft {
+  width: 485px;
+  float: left;
+}
+.main .print-container .printLeft .printImg {
+  width: 480px;
+  height: 360px;
+  overflow: hidden;
+  background: url(../img/goodsParticulars) no-repeat left top;
+}
+
+/*# sourceMappingURL=goodsParticulars.css.map */

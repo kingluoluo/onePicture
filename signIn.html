@@ -20,49 +20,26 @@
 				</h3>
 				<h4 class="account-login">
 					<a href="javascript:;">
-						手机动态登录
+						通过邮箱注册
 						<span></span>
 					</a>
 				</h4>
 				<h4 class="phone-login">
 					<a href="javascript:;">
-						返回账号登录
+						通过手机注册
 					</a>
 				</h4>
 				<!--帐号登录-->
 				<div class="login-validate loginAccunt-validate">
 					<div class="input-item">
 						<i class="icon-un"></i>
-						<input class="loginName changeIptBg" type="text" name="username" placeholder="请输入手机号/邮箱/用户名" eg="请输入手机号/邮箱/用户名">
+						<input class="loginName changeIptBg" type="text" name="username" placeholder="请输入手机号" eg="请输入手机号/邮箱/用户名">
 						<span class="name-error">请输入正确的11位手机号码<i class="errorLeft"></i></span>
 					</div>
 					<div class="input-item">
 						<i class="icon-pw"></i>
 						<input class="password changeIptBg" type="password" name="password" placeholder="请输入密码">
 						<span class="loginPwd-error">请输入密码<i class="errorLeft"></i></span>
-					</div>
-					<div class="input-item inputHeight">
-						<input class="loginCheck" id="autologin" type="checkbox" name="autologin" value="ON" checked="checked">
-						<i class="loginChk checked" name="loginChk"></i>
-						<span class="autoTxt">7天自动登录</span>
-						<a class="login-wjmm" href="javascript">忘记密码？</a>
-					</div>
-					<div class="input-item">
-						<input class="loginBtn" type="button" value="登  录">
-					</div>
-					<div class="input-item loginLink">
-						<a href="javascript:;" class="iconQQ iconLink"></a>
-						<a href="javascript:;" class="iconWX iconLink"></a>
-						<a href="javascript:;" class="iconWB iconLink"></a>
-						<a href="javascript:;" class="iconZFB iconLink"></a>
-					</div>
-				</div>
-				<!--手机登录-->
-				<div class="login-validate loginPhone-validate">
-					<div class="input-item">
-						<i class="icon-un"></i>
-						<input class="loginphone changeIptBg" type="text" name="Loginphone" placeholder="请输入手机号" eg="请输入手机号" maxlength="11">
-						<span class="loginPhone-error">请输入手机号<i class="errorLeft"></i></span>
 					</div>
 					<div class="input-item inputItemH1">
 						<div class="icon-yzm-item">
@@ -85,15 +62,48 @@
 						</div>
 						<span class="infoError errorloginCode">请输入短信验证码<i class="errorLeft"></i></span>
 					</div>
-					<div class="input-item inputItemH2">
-						<span class="readTxt">
-							阅读并接受
-							<a class="color2" href="javascript:;" target="_blank">《一幅图用户协议》</a>
-						</span>
+					<div class="input-item inputHeight">
+						<input class="loginCheck" id="autologin" type="checkbox" name="autologin" value="ON" checked="checked">
+						<i class="loginChk checked" name="loginChk"></i>
+						<p class="autoTxt">阅读并接受<span>一幅图用户协议</span></p>
+						<a class="login-wjmm" href="javascript">邀请码</a>
+					</div>
+					<div class="input-item">
+						<input class="loginBtn" type="button" value="注  册">
+					</div>
+				</div>
+				<!--邮箱登录-->
+				<div class="login-validate loginPhone-validate">
+					<div class="input-item">
+						<i class="icon-em"></i>
+						<input class="loginphone changeIptBg" type="text" name="Loginphone" placeholder="请输入邮箱" eg="请输入邮箱" maxlength="11">
+						<span class="loginPhone-error">请输入邮箱<i class="errorLeft"></i></span>
+					</div>
+					<div class="input-item">
+						<i class="icon-pw"></i>
+						<input class="password changeIptBg" type="password" name="password" placeholder="请输入密码">
+						<span class="loginPwd-error">请输入密码<i class="errorLeft"></i></span>
+					</div>
+					<div class="input-item inputItemH1">
+						<div class="icon-yzm-item">
+							<i class="icon-yzm"></i>
+							<input class="loginyzm changeIptBg" type="text" name="yanzhengma" maxlength="4" placeholder="验证码" eg="验证码" id="loginyzmPhone" >
+						</div>
+						<div class="yzm-H-item">
+							<a class="yzm-H" href="javascript:;">换</a>
+							<span class="loginCapt" id="loginPhone"></span>
+							<span class="loginyzmError">请输入验证码<i class="errorLeft"></i></span>
+						</div>
+					</div>
+					<div class="input-item inputHeight">
+						<input class="loginCheck" id="autologin" type="checkbox" name="autologin" value="ON" checked="checked">
+						<i class="loginChk checked" name="loginChk"></i>
+						<p class="autoTxt">阅读并接受<span>一幅图用户协议</span></p>
+						<a class="login-wjmm" href="javascript">邀请码</a>
 					</div>
 					<div class="input-item">
 						<span class="login-Uname">您的手机号码尚未注册，点击注册蒋自动注册一幅图帐号并与此手机号绑定</span>
-						<input class="PhoneloginBtn" type="button" value="登  录">
+						<input class="PhoneloginBtn" type="button" value="注  册">
 						<input class="PhoneRegBtn" type="botton" value="注  册">
 					</div>
 					<div class="input-item loginLink">
@@ -104,8 +114,8 @@
 					</div>
 				</div>
 				<div class="login-change">
-					<p>还没有一幅图帐号？</p>
-					<a href="javascript:;">注  册</a>
+					<p>我已经注册，现在就</p>
+					<a href="login.html">登  录</a>
 				</div>
 			</div>
 			<div class="login-right">

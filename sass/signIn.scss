@@ -348,7 +348,7 @@
    				.loginBtn{
 				    width: 300px;
 				    height: 42px;
-				    background: #57Af57;
+				    background: #3da0fe;
 				    display: inline-block;
 				    text-align: center;
 				    font: 20px/42px 'Microsoft Yahei';
@@ -358,8 +358,9 @@
 				    cursor: pointer;
 				    /*transition: background-color 0.5s ease;*/
 				    outline: none;
+				    margin-bottom: 30px;
 				    &:hover{
-				    	background: #53ce53;
+				    	background: #4fb6fe;
 				    }
    				}
    				.iconLink{
@@ -383,7 +384,7 @@
    				.iconZFB{
    					background: url(../img/login-img/icon-three.png) no-repeat -90px top;
    				}
-   				/*手机登录样式*/
+   				/*邮箱注册样式*/
 				.icon-un{
 					width: 22px;
 				    height: 22px;
@@ -391,6 +392,14 @@
 				    left: 10px;
 				    top: 11px;
 				    background: url(../img/login-img/icon-un.png) no-repeat left top;
+				}
+				.icon-em{
+					width: 22px;
+				    height: 22px;
+				    position: absolute;
+				    left: 10px;
+				    top: 11px;
+				    background: url(../img/signIn-img/icon-sj.png) no-repeat center;
 				}
 				.loginphone{
 					width: 210px;
@@ -526,7 +535,7 @@
 	    	.PhoneloginBtn{
 	    		width: 300px;
 			    height: 42px;
-			    background: #57Af57;
+			    background: #3da0fe;
 			    display: inline-block;
 			    text-align: center;
 			    font: 20px/42px 'Microsoft Yahei';
@@ -537,7 +546,7 @@
 			    /*transition: background-color 0.5s ease;*/
 			    outline: none;
 			    &:hover{
-			    	background: #53ce53;
+			    	background: #4fb6fe;
 			    }	
 	    	}
 	    	.inputHeight{
