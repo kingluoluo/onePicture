@@ -41,24 +41,32 @@ $(function(){
 			this.lgCode();
 			this.phoneBtnClick();
 			this.captImg();
+			
+			this.verifyC();//获取cookie
 		},
-		//cookie
+		//获取cookie
 		verifyC: function(){
 			/*var userinfor={
 				username: this.lgName.val(),
 				password: this.pwds.vla(),
 			}
 			$.cookie("userinfo",JSON.stringify(userinfo),expires:7,path:'/');*/
-			var username = $("input[name='username']").val();
-			var password = $('input[password="password"]').val();
 			var userinfo = $.cookie('userinfo')||'{}';
 			userinfo = JSON.parse(userinfo);
-			if(username != userinfo.username || password != userinfo.password){
+			/*
+			 if(username != userinfo.username || password != userinfo.password){
 				this.loginName();					
 				$('.errorloginName').html('您输入的用户名或者密码不正确');
 				return;
 			}
-			console.log(username);
+			 * */
+		 	$("input[name='username']").val( function(){
+		 		return userinfo["username"];
+		 	} );
+		 	$("input[name='password']").val( function(){
+		 		return userinfo["password"];
+		 	} );
+			//console.log(username);
 		},
 		/*input focus*/
 		havefocus: function(){

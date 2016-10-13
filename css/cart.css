@@ -1,0 +1,352 @@
+.header-wrapper {
+  width: 1000px !important;
+}
+
+.logo {
+  border-bottom: 1px solid #000;
+}
+.logo .logo-wrapper {
+  width: 1000px !important;
+  position: relative;
+  overflow: hidden;
+}
+.logo .logo-wrapper .payment {
+  position: absolute;
+  bottom: 19px;
+  right: 0;
+}
+.cart{
+  width: 100%;
+}
+.cart .cart-wrapper{
+  width: 1000px;
+  margin:  0 auto;
+}
+/*cart-main*/
+.cart-main {
+  background-color: #fff;
+  color:  #999;
+  margin-top:  50px;
+ 
+}
+.cart-main li input{
+  display:  none;
+}
+.cart-main li.td {
+  float: left;
+}
+.cart-main li.td-checkbox {
+  width: 23%;
+  padding-left: 15px;
+}
+.cart-main li.td-gstyle {
+  width: 35%;
+  text-align: center;
+}
+.cart-main li.td-gprice {
+  width: 100px;
+  text-align: center;
+}
+.cart-main li.td-gamount {
+  width: 100px;
+  text-align: center;
+}
+.cart-main li.td-gmoney {
+  width: 100px;
+  text-align: center;
+}
+.cart-main li.td-option {
+  width: 96px;
+  text-align: center;
+}
+/*cart-content*/
+.content-top{
+  height: 59px;
+  width:  100%;
+}
+.content-title{
+    padding: 14px 10px;
+}
+.content-title input{
+  display:  none;
+}
+.content-title span{
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #666;
+}
+.checke{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 7px 2px 0;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+    overflow: hidden;
+}
+.checke_checked{
+    background: #fff;
+    border-color: #ccc;
+}
+.checke i{
+    overflow: hidden;
+    background-color: #ff6600;
+    background: url(../img/cart-img/check.jpg) -18px -3px;
+    display: block;
+    width: 12px;
+    height: 9px;
+    margin: 2px 0 0 1px;
+    padding: 0!important;
+}
+/*cart-title*/
+.cart-main .cart-main-title {
+  line-height: 33px;
+  background: #f7f7f7;
+}
+
+.cart-main .cart-main-title .td-checkbox input {
+  vertical-align: -2px;
+}
+.cart-main .cart-main-title .td-inner {
+  padding-left: 91px;
+
+}
+.cart-main a {
+  color: #3c3c3c;
+}
+.td-option a:hover {
+  color: #f40;
+  text-decoration: underline;
+} 
+
+
+.goods-item{
+	width: 100%;
+	height: auto;
+}
+
+/*cart-goods-item*/
+.cart-goods-item {
+  border: 1px solid #ccc;
+  border-top:  2px solid #000;
+  min-height: 89px;
+  height:  auto;
+  padding: 10px 0;
+}
+.cart-goods-item:hover{
+  background: #fffbf8;
+}
+.cart-goods-item .td-inner .goods-img {
+  float: left;
+  width: 56px;
+  height: 56px;
+  margin: 10px 0 0 2px;
+  border:  1px solid #ccc;
+  cursor: pointer;
+}
+.cart-goods-item .td-inner .checke{
+  float: left;
+  margin-top: 33px;
+  margin-left: 40px;
+}
+.select-all-btn{
+  display:  none;
+}
+.cart-goods-item .td-gname .goods-img img
+ {
+  width: 56px;
+  height: 56px;
+}
+.cart-goods-item .td-gname .goods-name {
+  margin: 10px 0 0 8px;
+   float:  left;
+   width: 156px;
+}
+.cart-goods-item .td-gname .goods-name p{
+     font: bold 16px/20px '微软雅黑';
+    color: #333;
+}
+.cart-goods-item .td-gname .goods-name span{
+    font-size: 12px;
+    line-height: 20px;
+    display: block;
+    width: 120px;
+}
+.td-style{
+    width: 300px;
+    padding-left: 0;
+    padding-right: 0px;
+    line-height: 20px;
+    color: #999;
+}
+.td-style .goodsStyle{
+    font-weight: 400;
+    color:  #666;
+}
+.td-style .goodsStyle .goodsStyleHtml{
+  color:  #A5A5A5;
+}
+.goodsPrice{
+  font-size: 16px;
+  display:  inline-block;
+  margin-top:  40px;
+}
+.td-gprivilege{
+  font-size: 16px;
+  margin:  40px 0 0 38px;
+}
+.cart-goods-item .td-gmoney {
+  color: #f60;
+  font-weight: 700;
+}
+.goodsMoney{
+  font-size: 16px;
+  display:  inline-block;
+  margin:  40px 0 0 64px;
+}
+.td-option a{
+  margin:  40px 0 0 70px;
+  display:  inline-block;
+}
+/*cart option*/
+.cart-option {
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 50px;
+  background-color: #f8f8f8;
+}
+.cart-option .options {
+  float: left;
+  width: 484px;
+}
+.cart-option .options .options-item {
+  float: left;
+  margin:0 10px 0 10px;
+}
+.cart-option .options .options-item a:hover {
+  text-decoration: underline;
+}
+.cart-option .options .options-item .deleteOpt{
+  margin-right: 10px;
+  display:  inline-block;
+}
+.cart-option .options .options-item .deleteAll{
+  position: relative;
+  padding-left: 22px;
+}
+.cart-option .options .options-item .deleteAll i{
+     background: url(../img/cart-img/bg_sweet_user.png)  -31px -54px;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    cursor: pointer;
+}
+.goChenge{
+  float:  right;
+  width: 232px;
+}
+.goChenge .InIndex{
+  float:  left;
+}
+.goChenge .InIndex:hover{
+  text-decoration: underline;
+}
+.goChenge .go-pay{
+  width: 140px;
+  height: 70px;
+  background-color: #f60;
+  font-size: 20px;
+  line-height: 70px;
+  text-align: center;
+  float:  right;
+  color:  #fff;
+}
+.cart-option .cart-info {
+  float: left;
+}
+.cart-option .cart-info .info-item {
+  float:left;
+  width:  200px;
+  height:70px;
+}
+.cart-option .cart-info .info-item span {
+  font-size: 26px;
+  color: #f40;
+  padding: 0 5px;
+}
+.cart-option .cart-info .go-pay {
+  float:  left;
+  width: 120px;
+  text-align: center;
+  background-color: #aaa;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 10px;
+  cursor: not-allowed;
+}
+.cart-option .cart-info .go-pay.can-pay {
+  cursor: pointer;
+  background-color: #f40;
+}
+
+.noGoods{
+  width: 100%;
+}
+.noGoods-wrapper{
+  height: 140px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 100px  0 0 450px;
+  text-align:  center;
+}
+.noGoods-wrapper .toIndex{
+    float:  left;
+    margin-left: 30px;
+    font-size: 18px;
+    color:  #000;
+    font-weight: 800;
+}
+.noGoods-wrapper .toIndex .goIndexBtn{
+  width: 108px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f60;
+  color:  #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 36px;
+}
+.noGoods-wrapper img{
+  float:  left;
+}
+.hotServe{
+  width: 1000px;
+  margin: 0 auto;
+  height: 267px;
+}
+.hotServe .hotServeTop{
+  height:  37px;
+  font-size: 18px;
+  font-weight: 800px;
+  padding-left: 10px;
+  line-height:  37px;
+  color:  #000;
+}
+.hotServe .hotServeImg{
+  width:  998px;
+  margin:  20px auto;
+  height:  200px;
+}
+.hotServe .hotServeImg a{
+  float:  left;
+  display:  inline-block;
+  margin-right: 14px;
+}
+/*# sourceMappingURL=cart.css.map */

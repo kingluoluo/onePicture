@@ -2,6 +2,10 @@
 $(function(){
 	var login = {
 		init: function(){
+			this.login= {
+				username: true,
+				password: true
+			};
 			/*input focus*/
 			this.lgName = $('.loginName');
 			this.pwds = $('.password');
@@ -41,24 +45,58 @@ $(function(){
 			this.lgCode();
 			this.phoneBtnClick();
 			this.captImg();
+			
+		
 		},
 		//cookie
-		signInC: function(){
-			/*var userinfor={
-				username: this.lgName.val(),
-				password: this.pwds.vla(),
+		//验证用户名是否存在    待更改
+		checkUName: function(username){
+			var that = this;
+			$.getJSON('js/login.json',function(result){
+				that.login.username = true;
+				for( var key in result){
+					if( username = result[key].username ){
+						console.log('用户名已存在');
+						that.login.username = false;
+						break;
+					}	
+				}
+				if( !that.login.username ){
+					//错误提示信息显示
+					console.log('错误提示信息显示');
+					$('.errorloginName').html('您输入的用户名已存在');
+					$('.errorloginName').show();
+				}else{
+					$('.errorloginName').hide();
+				}
+			});
+		},
+		//存储cookie
+		ClickCookie: function(){
+			var that = this;
+			var flag = true;
+			//判断所有验证是否合法
+			for( var key in that.login ){
+				if( !that.login[key] ){
+					flag = false;
+					break;
+				}
 			}
-			$.cookie("userinfo",JSON.stringify(userinfo),expires:7,path:'/');*/
-			var username = $("input[name='username']").val();
-			var password = $('input[password="password"]').val();
-			var userinfo = $.cookie('userinfo')||'{}';
-			userinfo = JSON.parse(userinfo);
-			if(username != userinfo.username || password != userinfo.password){
-				this.loginName();					
-				$('.errorloginName').html('您输入的用户名或者密码不正确');
+			if( !flag ){
+				alert('部分数据不合法');
 				return;
 			}
-			console.log(username);
+			//存储cookie
+			
+			var username = $("input[name='username']").val();
+			var password = $('input[password="password"]').val();
+			
+			var	userinfo = {
+				username: username,
+				password: password
+			};
+			$.cookie('userinfo',JSON.stringify( userinfo ),{expires: 7,path:'/'});
+			console.log(JSON.parse( $.cookie('userinfo') ));
 		},
 		/*input focus*/
 		havefocus: function(){
@@ -94,6 +132,7 @@ $(function(){
 			this.lgName.blur(function(){
 				var val = $(this).val();
 				$(this).removeClass('input-error');
+				//that.checkUName( val );
 				if(	!that.phoneReg.test(val) ){
 					$(this).next().show();
 					return;
@@ -108,6 +147,9 @@ $(function(){
 			this.loginphone.blur(function(){
 				var val = $(this).val();
 				$(this).removeClass('input-error');
+				if( $(this).is('input[name="username"]')){
+					that.checkUName( $(this).val() );
+				}
 				if(	!that.email.test(val) ){
 					$(this).next().show();
 					return;
@@ -130,7 +172,7 @@ $(function(){
 				}
 			});
 		},
-		//验证码
+		//验证码验证
 		loginYzm: function(){
 			var that = this;
 			this.loginyzm.blur(function(){
@@ -140,6 +182,9 @@ $(function(){
 				if( !( val == num ) ){
 					$(this).parent().next().find('.loginyzmError').show();
 					return;
+				}else if( val == num){
+					$(this).parent().next().find('.loginyzmError').hide();
+					return;
 				}
 			});
 			this.loginyzm.focus(function(){
@@ -147,10 +192,11 @@ $(function(){
 				var num = $('.loginCapt').html();
 				if( val == num){
 					$(this).parent().next().find('.loginyzmError').hide();
+					return;
 				}
 			});
 		},
-		//短信验证码
+		//短信验证码验证
 		lgCode: function(){
 			var that = this;
 			this.loginCode.blur(function(){
@@ -176,7 +222,7 @@ $(function(){
 			this.loginBtn.click(function(){
 				that.loginName();
 				that.loginPhone();
-				that.signInC();
+				//that.signInC();
 				/*var userinfo = {
 					username: $('.loginName').val(),
 					password: $('.password').val()
@@ -184,7 +230,8 @@ $(function(){
 				$.cookie('userinfo',JSON.stringify(userinfo),{expires:7,path:'/'});
 				window.location.href = 'login.html';
 				 */
-				console.log("登录成功");
+				console.log("注册成功");
+				that.ClickCookie();//存储cookie
 				window.location.href = 'login.html';
 			});
 		},
@@ -204,7 +251,7 @@ $(function(){
 				window.location.href = 'login.html';
 				 */
 				console.log("登录成功");
-				window.location.href = 'login.html';
+				//window.location.href = 'login.html';
 			});
 			
 		},

@@ -744,6 +744,7 @@
   width: 100%;
 }
 .footer .f-container .container-wrapper .c-w-active {
+  width: 100%;
   height: 19px;
   min-height: 19px !important;
   max-height: 120px !important;

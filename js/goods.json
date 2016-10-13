@@ -1,0 +1,27 @@
+{
+	"1534": {
+		"goods-id": 1534,
+		"goods-style":"亚克力",
+		"goods-price": 62,
+		"goods-img": "img/goodsParticulars/2.jpg"
+	},
+	"1535": {
+		"goods-id": 1535,
+		"goods-style":"合金",
+		"goods-price": 197,
+		"goods-img": "img/goodsParticulars/2.jpg"
+	},
+	"1536": {
+		"goods-id": 1536,
+		"goods-style":"镀金",
+		"goods-price": 456,
+		"goods-img": "img/goodsParticulars/2.jpg"
+	},
+	"1537": {
+		"goods-id": 1537,
+		"goods-style":"不锈钢",
+		"goods-price": 258,
+		"goods-img": "img/goodsParticulars/2.jpg"
+	}
+	
+}
